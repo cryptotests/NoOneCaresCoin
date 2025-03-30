@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5"> <!-- bo po co responsywność -->
+    <title>NOCC - No One Cares Coin (Official Not-Site)</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Papyrus', 'Wingdings', sans-serif;
+            background-color: #FFFF99;
+            background-image: url('https://web.archive.org/web/20090829092658/http://geocities.com/EnchantedForest/Cottage/3916/bg_stars.gif');
+            color: #FF00FF;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .logo {
+            font-size: 120px;
+            margin: 5px;
+            transform: rotate(5deg);
+        }
+        .container {
+            background-color: white;
+            border: 15px ridge #FF0000;
+            margin: 10px;
+            padding: 5px;
+        }
+        .marquee {
+            background: linear-gradient(to right, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF);
+            color: black;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .hit-counter {
+            border: 3px solid black;
+            background: #CCCCCC;
+            display: inline-block;
+            padding: 2px 10px;
+        }
+        .construction {
+            width: 400px;
+            height: 100px;
+        }
+        .guestbook {
+            border: 2px dotted #000;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Początek strony (czyli koniec nadziei) -->
+    <div class="logo">💤</div>
+    <h1 class="blink">NO ONE CARES COIN</h1>
+    <h2><i>"Probably the worst investment of your life"</i></h2>
+    
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="15">
+            🚨 WARNING: THIS COIN HAS NO VALUE 🚨 • NOT A SCAM (BUT ALSO NOT NOT A SCAM) • PRICE ONLY GOES DOWN • 
+        </marquee>
+    </div>
+    
+    <div class="container">
+        <h2>ABOUT THIS <s>PROJECT</s> THING</h2>
+        <p>We made a token because we were bored. You shouldn't buy it. Seriously.</p>
+        
+        <img src="https://www.freeiconspng.com/uploads/under-construction-icon-1.png" class="construction" alt="Under construction">
+        <p><b>WEBSITE STATUS:</b> "Probably broken"</p>
+        
+        <h3>TOKEN "DETAILS"</h3>
+        <p>Contract: <code>0xDEADBEEFDEADBEEFDEADBEEFDEADBEEFDEADBEEF</code></p>
+        <p>Total Supply: 1,000,000,000,000 NOCC (all equally worthless)</p>
+        <p>Price: <span id="price">0.0000000001$</span> <button onclick="document.getElementById('price').innerText = '0.0000000000$'">Click to update</button></p>
+        
+        <h3>HOW TO LOSE MONEY</h3>
+        <ol style="text-align: left;">
+            <li>Buy NOCC</li>
+            <li>Wait</li>
+            <li>Congratulations, you lost money!</li>
+        </ol>
+    </div>
+    
+    <div class="guestbook">
+        <h3>VISITOR GUESTBOOK (LAST ENTRY: 2003)</h3>
+        <form>
+            Name: <input type="text" name="name" value="Anonymous"><br>
+            Comment: <textarea rows="3" cols="40">This website sucks</textarea><br>
+            <input type="submit" value="Submit (does nothing)">
+        </form>
+    </div>
+    
+    <div style="margin: 20px;">
+        <div class="hit-counter">
+            <img src="https://web.archive.org/web/20091026190721/http://geocities.com/dsprobotics/counter.gif" alt="counter">
+            <br>
+            VISITORS: <span id="counter">1</span> (probably a bot)
+        </div>
+    </div>
+    
+    <div style="background: black; color: white; padding: 10px; margin-top: 20px;">
+        <h3>IMPORTANT LINKS (DON'T CLICK)</h3>
+        <p>
+            <a href="#" style="color: lime;">Whitepaper</a> • 
+            <a href="#" style="color: lime;">Buy NOCC</a> • 
+            <a href="#" style="color: lime;">Team</a> • 
+            <a href="#" style="color: lime;">Partners (none)</a>
+        </p>
+    </div>
+    
+    <div style="margin: 20px;">
+        <img src="https://web.archive.org/web/20090829123009/http://geocities.com/SoHo/Studios/9262/email.gif" alt="email">
+        <p>Email us (we won't reply): <a href="mailto:nocc@hotmail.com">nocc@hotmail.com</a></p>
+    </div>
+    
+    <div class="footer" style="font-size: 10px; color: #666;">
+        <p>© 1996-2024 No One Cares Coin | Not financial advice | Not even advice | Made while drunk</p>
+        <p>Best viewed in Internet Explorer 6.0 at 800x600 resolution</p>
+        <img src="https://web.archive.org/web/20091027150650/http://geocities.com/timessquare/7845/netscape_now.gif" alt="Netscape Now">
+    </div>
+
+    <script>
+        // Fake visitor counter that sometimes resets to zero
+        setInterval(() => {
+            const counter = document.getElementById('counter');
+            let count = parseInt(counter.innerText);
+            if (Math.random() > 0.9) {
+                counter.innerText = "0";
+            } else {
+                counter.innerText = count + Math.floor(Math.random() * 3);
+            }
+        }, 3000);
+        
+        // Randomly change background color
+        setInterval(() => {
+            document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 80%, 80%)`;
+        }, 5000);
+        
+        // Play terrible MIDI if user stays too long
+        setTimeout(() => {
+            if (Math.random() > 0.7) {
+                const audio = new Audio('https://www.midiworld.com/download/1866');
+                audio.loop = true;
+                audio.volume = 0.1;
+                audio.play().catch(() => {});
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
